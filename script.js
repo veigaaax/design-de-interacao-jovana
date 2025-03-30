@@ -90,15 +90,14 @@ function loadImage(event) {
   const file = event.target.files[0];
   if (file) {
       image.src = URL.createObjectURL(file);
-      image.style.display = 'block'; // Garante que a imagem apareça
   }
 }
 
+// Função para remover a imagem
 function removeImage() {
   const image = document.getElementById('menu-image');
-  image.style.display = 'none'; // Esconde a imagem
+  image.src = '';
 }
-
 
 // Adiciona os eventos de input para atualização em tempo real
 document.getElementById('bg-color').addEventListener('input', updateMenuStyle);
