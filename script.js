@@ -93,11 +93,11 @@ function loadImage(event) {
   }
 }
 
-// Função para remover a imagem
 function removeImage() {
   const image = document.getElementById('menu-image');
-  image.src = '';
+  image.style.display = 'none'; // Esconde a imagem
 }
+
 
 // Adiciona os eventos de input para atualização em tempo real
 document.getElementById('bg-color').addEventListener('input', updateMenuStyle);
